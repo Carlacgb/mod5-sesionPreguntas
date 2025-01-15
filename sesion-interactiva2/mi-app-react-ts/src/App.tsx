@@ -1,33 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Doctorcard from './components/Doctorcard'
+import DoctorManager from './utils/DoctorManager'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const doctor = { id: '1', name: 'Ruperto Vespertino', experiencia: 3, especialidad: 'Cardiólogo' }
+
+  const manager = new DoctorManager();
+  manager.addDoctor({ id: 1, name: 'Ricardo García', experiencia: 10, especialidad: 'Médico General' });
+  manager.addDoctor({ id: 2, name: 'Bertha Ruperta', experiencia: 30, especialidad: 'Psicóloga' });
+  
+  const doctores = manager.getDoctors();
 
   return (
     <>
+
+      <h1 className='text-primary'>Doctores hospital</h1>
+      <Doctorcard {...doctor} />
+
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>Gestión de Doctores</h1>
+        {doctores.map((doctor) => (
+          <div key={doctor.id}>
+            <h3>{doctor.name}</h3>
+            <p>Experiencia: {doctor.experiencia}</p>
+            <p>Especialidad: {doctor.especialidad}</p>
+          </div>
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
     </>
   )
 }

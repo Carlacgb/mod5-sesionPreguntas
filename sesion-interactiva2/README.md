@@ -2,7 +2,7 @@
 
 Nota: para revisar pregunta práctica ingresar a carpeta mi-app-react-ts
 
-# Preguntas teóricas sobre TypeScript
+# 1. Preguntas teóricas sobre TypeScript
 
 ## ¿Qué es TypeScript y para qué se utiliza?
 
