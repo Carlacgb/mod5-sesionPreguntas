@@ -1,10 +1,11 @@
 type ID = string | number;
 interface Doctor {
     id: ID;
-    name: string;
+    name: 'Felipe';
     experiencia: number;
     especialidad: string;
 }
+
 const Doctorcard: React.FC<Doctor> = ({ id, name, experiencia, especialidad }) => {
     return (
         <div className="card">

@@ -33,3 +33,25 @@ TypeScript es un lenguaje de programación de código abierto desarrollado por M
 ## ¿Qué es el sistema de tipos en TypeScript y cómo ayuda a evitar errores en el tiempo de desarrollo?
 
 El sistema de tipos en TypeScript es una característica que permite definir y trabajar con tipos estáticos en el código.  Esto asegura que las variables, funciones, parámetros y otros elementos tengan valores específicos o estructuras predefinidas (por ejemplo, un `string`, un `number`, un objeto con una forma particular). TypeScript realiza una verificación estática del código mientras se escribe, alertando sobre problemas potenciales relacionados con los tipos. Esto previene errores que solo aparecerían en tiempo de ejecución en JavaScript, como intentar sumar un número a una cadena o acceder a una propiedad que no existe en un objeto.
+
+
+# 2. Ejercicio Práctico: Definiendo Tipos e Inferencia
+
+Se crea el componente Doctorcard, dentro de la carpeta components, que está dentro de la carpeta src. En este componente se definen los diferentes tipos para datos de doctores del hospital. En el caso de ID se combina los tipos string y number usando el operador |.
+
+En cuanto a la inferencia, TypeScript al ver que la función Doctorcard está tipada con React.FC<Doctor>, infiere automáticamente que las props que recibe (id, name, experiencia, especialidad) tienen los mismos tipos definidos en la interfaz Doctor. No necesitas repetir los tipos en la lista de argumentos del componente.. Además se aplica en la propiedad name. 
+
+
+# 3. Definición de Interfaces y Clases en TypeScript
+
+Se implementa las interfaces en App.tsx en la segunta y tercera const. Y la clase en el componenten Doctor Manager.
+
+# 4. TypeScript y ReactJS: Implementación Básica en un Componente
+
+Se implementa en el componenten Doctorcard.tsx y en el componente App.tsx
+
+# 5. Ventajas de TypeScript en el Desarrollo con ReactJS
+- Mejorar la calidad del código, reducir errores y facilitar el mantenimiento a largo plazo.
+- TypeScript permite definir interfaces o tipos para las props, lo que hace que los errores de tipo sean detectados en tiempo de compilación.
+- Se puede tipar explícitamente el estado con useState, garantizando la coherencia de los datos.
+- El tipado explícito de TypeScript sirve como una forma de documentación implícita del código, facilitando la comprensión de la estructura del código y la colaboración entre desarrolladores.
